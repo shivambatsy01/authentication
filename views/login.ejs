@@ -1,0 +1,28 @@
+<h1>login here</h1>
+
+<div class="err">
+  <% if(typeof(err)!='undefined')  
+      {%>
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong><%= err %></strong>
+        </div>
+           <h1></h1>
+      <%}
+  %>
+</div>
+
+
+
+<form method="POST" action="/login">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Enter Email address as username</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
